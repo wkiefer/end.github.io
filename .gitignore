@@ -1,6 +1,9 @@
 
 
 .DS_Store
+node_modules/
+.pnpm-store/
+dist/
 
 # Basic Jekyll gitignores (synchronize to Jekyll.gitignore)
 _site/
