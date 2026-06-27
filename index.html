@@ -46,10 +46,22 @@
               <h2 id="newsletter-title">Newsletter</h2>
             </div>
             <p class="newsletter-copy">Sign up for updates on new music, shows, and more.</p>
-            <form class="signup-form" aria-label="Newsletter signup">
+            <form
+              class="signup-form"
+              action="https://app.kit.com/forms/9617956/subscriptions"
+              method="post"
+              aria-label="Newsletter signup"
+            >
               <label class="sr-only" for="email">Email address</label>
-              <input id="email" name="email" type="email" placeholder="Email Address" autocomplete="email" />
-              <button type="button">Sign Up</button>
+              <input
+                id="email"
+                name="email_address"
+                type="email"
+                placeholder="Email Address"
+                autocomplete="email"
+                required
+              />
+              <button type="submit">Sign Up</button>
             </form>
           </section>
         </section>
