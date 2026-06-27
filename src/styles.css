@@ -235,9 +235,11 @@ body:not(:has(:target)) #shows {
 }
 
 .site-footer {
+  width: var(--content-width);
+  margin-left: clamp(22rem, 58vw, 46rem);
   display: flex;
   justify-content: center;
-  padding: 0 clamp(1.25rem, 6vw, 6rem) clamp(2rem, 5vw, 4rem);
+  padding: 0 0 clamp(2rem, 5vw, 4rem);
 }
 
 .instagram-link {
@@ -293,6 +295,12 @@ body:not(:has(:target)) #shows {
     width: min(100%, 32rem);
     margin: 0 auto;
     padding: clamp(4rem, 15vw, 6rem) 1.25rem 3.5rem;
+  }
+
+  .site-footer {
+    width: auto;
+    margin-left: 0;
+    padding: 0 1.25rem clamp(2rem, 5vw, 4rem);
   }
 
   .section-heading h2,
