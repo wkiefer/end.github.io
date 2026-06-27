@@ -8,6 +8,7 @@
   --placeholder: rgba(0, 0, 0, 0.88);
   --logo-filter: none;
   --content-width: min(34rem, 37vw);
+  --content-right-inset: clamp(1.25rem, 5vw, 4.5rem);
 }
 
 * {
@@ -128,7 +129,7 @@ body:has(#about:target) .site-nav a[href="#about"]::after {
 .site-shell {
   width: var(--content-width);
   margin-left: clamp(22rem, 58vw, 46rem);
-  padding: clamp(7rem, 18vh, 18rem) clamp(1.25rem, 5vw, 4.5rem) 5rem 0;
+  padding: clamp(7rem, 18vh, 18rem) var(--content-right-inset) 5rem 0;
 }
 
 .panel {
@@ -235,7 +236,7 @@ body:not(:has(:target)) #shows {
 }
 
 .site-footer {
-  width: var(--content-width);
+  width: calc(var(--content-width) - var(--content-right-inset));
   margin-left: clamp(22rem, 58vw, 46rem);
   display: flex;
   justify-content: center;
