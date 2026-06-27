@@ -280,6 +280,10 @@ input {
 }
 
 @media (max-width: 760px) {
+  #app {
+    grid-template-rows: auto auto minmax(0, 1fr) auto;
+  }
+
   body::after {
     display: none;
   }
@@ -311,6 +315,7 @@ input {
   .site-shell {
     width: min(100%, 32rem);
     margin: 0 auto;
+    min-height: 100%;
     padding: clamp(4rem, 15vw, 6rem) 1.25rem 3.5rem;
   }
 
