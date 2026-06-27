@@ -6,7 +6,6 @@
   --line: #000;
   --field-border: rgba(0, 0, 0, 0.72);
   --placeholder: rgba(0, 0, 0, 0.88);
-  --logo-filter: none;
   --content-width: min(34rem, 37vw);
   --content-right-inset: clamp(1.25rem, 5vw, 4.5rem);
 }
@@ -46,7 +45,6 @@ body::after {
   background-repeat: no-repeat;
   background-position: left top;
   background-size: 100% auto;
-  filter: var(--logo-filter);
 }
 
 a {
@@ -297,7 +295,6 @@ input {
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    filter: var(--logo-filter);
   }
 
   .site-header {
@@ -359,7 +356,6 @@ input {
     --line: #fff;
     --field-border: rgba(255, 255, 255, 0.78);
     --placeholder: rgba(255, 255, 255, 0.9);
-    --logo-filter: invert(1);
   }
 }
 
