@@ -8,16 +8,21 @@
       content="The End of All Things. Upcoming shows, newsletter, music, and band information."
     />
     <title>The End of All Things</title>
+    <link rel="stylesheet" href="/src/styles.css" />
   </head>
   <body>
     <div id="app">
+      <input class="tab-control" type="radio" name="site-tab" id="tab-shows" checked />
+      <input class="tab-control" type="radio" name="site-tab" id="tab-music" />
+      <input class="tab-control" type="radio" name="site-tab" id="tab-about" />
+
       <div class="mobile-logo" aria-hidden="true"></div>
 
       <header class="site-header" aria-label="Primary">
         <nav class="site-nav">
-          <a href="#shows">Shows</a>
-          <a href="#music">Music</a>
-          <a href="#about">About</a>
+          <label for="tab-shows">Shows</label>
+          <label for="tab-music">Music</label>
+          <label for="tab-about">About</label>
         </nav>
       </header>
 
@@ -81,6 +86,5 @@
         </a>
       </footer>
     </div>
-    <script type="module" src="/src/main.js"></script>
   </body>
 </html>

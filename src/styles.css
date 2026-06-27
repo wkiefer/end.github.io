@@ -84,6 +84,15 @@ input {
   display: none;
 }
 
+.tab-control {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
 .site-header {
   display: flex;
   justify-content: flex-end;
@@ -99,13 +108,13 @@ input {
   text-transform: uppercase;
 }
 
-.site-nav a {
+.site-nav label {
   position: relative;
   padding-block: 0.2rem 0.55rem;
-  text-decoration: none;
+  cursor: pointer;
 }
 
-.site-nav a::after {
+.site-nav label::after {
   position: absolute;
   right: 0.34em;
   bottom: 0;
@@ -118,12 +127,18 @@ input {
   transition: transform 160ms ease;
 }
 
-.site-nav a:hover::after,
-body:not(:has(:target)) .site-nav a[href="#shows"]::after,
-body:has(#shows:target) .site-nav a[href="#shows"]::after,
-body:has(#music:target) .site-nav a[href="#music"]::after,
-body:has(#about:target) .site-nav a[href="#about"]::after {
+.site-nav label:hover::after,
+#tab-shows:checked ~ .site-header label[for="tab-shows"]::after,
+#tab-music:checked ~ .site-header label[for="tab-music"]::after,
+#tab-about:checked ~ .site-header label[for="tab-about"]::after {
   transform: scaleX(1);
+}
+
+#tab-shows:focus-visible ~ .site-header label[for="tab-shows"],
+#tab-music:focus-visible ~ .site-header label[for="tab-music"],
+#tab-about:focus-visible ~ .site-header label[for="tab-about"] {
+  outline: 1px solid currentColor;
+  outline-offset: 0.35rem;
 }
 
 .site-shell {
@@ -136,8 +151,9 @@ body:has(#about:target) .site-nav a[href="#about"]::after {
   display: none;
 }
 
-.panel:target,
-body:not(:has(:target)) #shows {
+#tab-shows:checked ~ .site-shell #shows,
+#tab-music:checked ~ .site-shell #music,
+#tab-about:checked ~ .site-shell #about {
   display: block;
 }
 
