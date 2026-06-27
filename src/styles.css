@@ -277,6 +277,17 @@ input {
   padding-top: clamp(6rem, 14vh, 11rem);
 }
 
+#about.panel-placeholder {
+  padding-top: 0;
+}
+
+.about-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 0 clamp(2rem, 5vw, 3rem);
+}
+
 @media (max-width: 760px) {
   #app {
     grid-template-rows: auto auto minmax(0, 1fr) auto;
