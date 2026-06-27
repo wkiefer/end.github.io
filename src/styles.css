@@ -155,6 +155,18 @@ input {
   display: block;
 }
 
+#subscribed:target {
+  display: block;
+}
+
+#subscribed:target ~ .panel {
+  display: none;
+}
+
+#app:has(#subscribed:target) .site-nav label::after {
+  transform: scaleX(0);
+}
+
 .section-heading {
   margin-bottom: clamp(2.25rem, 4vw, 3.8rem);
 }
