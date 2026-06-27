@@ -1,9 +1,12 @@
 :root {
-  --paper: #eee7d7;
-  --paper-deep: #ded3bd;
-  --ink: #0d0d0b;
-  --muted-ink: #343026;
-  --line: #14130f;
+  color-scheme: light;
+  --paper: #fff;
+  --ink: #000;
+  --muted-ink: #202020;
+  --line: #000;
+  --field-border: rgba(0, 0, 0, 0.72);
+  --placeholder: rgba(0, 0, 0, 0.88);
+  --logo-filter: none;
   --content-width: min(34rem, 37vw);
 }
 
@@ -21,26 +24,13 @@ body {
   margin: 0;
   overflow-x: hidden;
   color: var(--ink);
-  background:
-    radial-gradient(circle at 24% 8%, rgba(255, 255, 255, 0.38), transparent 28rem),
-    radial-gradient(circle at 85% 78%, rgba(129, 105, 72, 0.12), transparent 32rem),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.06), transparent 38%),
-    var(--paper);
+  background: var(--paper);
   font-family: Georgia, "Times New Roman", serif;
   letter-spacing: 0;
 }
 
 body::before {
-  position: fixed;
-  inset: 0;
-  z-index: -2;
-  content: "";
-  pointer-events: none;
-  background:
-    repeating-linear-gradient(72deg, rgba(0, 0, 0, 0.018) 0 1px, transparent 1px 7px),
-    repeating-linear-gradient(158deg, rgba(255, 255, 255, 0.08) 0 1px, transparent 1px 11px);
-  opacity: 0.72;
-  mix-blend-mode: multiply;
+  display: none;
 }
 
 body::after {
@@ -55,6 +45,7 @@ body::after {
   background-repeat: no-repeat;
   background-position: left top;
   background-size: 100% auto;
+  filter: var(--logo-filter);
 }
 
 a {
@@ -220,14 +211,14 @@ body:not(:has(:target)) #shows {
 }
 
 .signup-form input {
-  border: 1px solid rgba(13, 13, 11, 0.72);
+  border: 1px solid var(--field-border);
   padding: 0 1.55rem;
   color: var(--ink);
-  background: rgba(238, 231, 215, 0.2);
+  background: transparent;
 }
 
 .signup-form input::placeholder {
-  color: rgba(13, 13, 11, 0.88);
+  color: var(--placeholder);
   opacity: 1;
 }
 
@@ -297,6 +288,7 @@ body:not(:has(:target)) #shows {
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+    filter: var(--logo-filter);
   }
 
   .site-header {
@@ -339,6 +331,19 @@ body:not(:has(:target)) #shows {
   .signup-form input,
   .signup-form button {
     min-height: 3.8rem;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --paper: #000;
+    --ink: #fff;
+    --muted-ink: #e8e8e8;
+    --line: #fff;
+    --field-border: rgba(255, 255, 255, 0.78);
+    --placeholder: rgba(255, 255, 255, 0.9);
+    --logo-filter: invert(1);
   }
 }
 
