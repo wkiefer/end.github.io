@@ -155,11 +155,13 @@ input {
   display: block;
 }
 
-#subscribed:target {
+.site-shell #subscribed:target {
   display: block;
 }
 
-#subscribed:target ~ .panel {
+.site-shell #subscribed:target ~ #shows,
+.site-shell #subscribed:target ~ #music,
+.site-shell #subscribed:target ~ #about {
   display: none;
 }
 
