@@ -213,6 +213,19 @@ input {
   text-transform: uppercase;
 }
 
+.recording-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.65rem;
+}
+
+.recording-venue {
+  font-size: clamp(1.05rem, 1.6vw, 1.35rem);
+  line-height: 1.5;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
 .text-link {
   justify-self: start;
 }
