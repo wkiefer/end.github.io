@@ -184,10 +184,6 @@ input {
   text-transform: uppercase;
 }
 
-.live-shows-heading {
-  margin: 0 0 2.25rem;
-}
-
 .show-card {
   display: grid;
   gap: 1.35rem;
@@ -198,7 +194,6 @@ input {
   margin: 0;
 }
 
-.live-shows-heading,
 .show-date,
 .time,
 .text-link,
@@ -215,6 +210,19 @@ input {
   font-size: clamp(2rem, 4.2vw, 3.7rem);
   line-height: 0.95;
   letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.recording-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.65rem;
+}
+
+.recording-venue {
+  font-size: clamp(1.05rem, 1.6vw, 1.35rem);
+  line-height: 1.5;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
 }
 
@@ -353,7 +361,6 @@ input {
   }
 
   .section-heading h2,
-  .live-shows-heading,
   .show-date,
   .time,
   .text-link,
