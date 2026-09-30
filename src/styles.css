@@ -184,6 +184,10 @@ input {
   text-transform: uppercase;
 }
 
+.live-shows-heading {
+  margin: 0 0 2.25rem;
+}
+
 .show-card {
   display: grid;
   gap: 1.35rem;
@@ -194,6 +198,7 @@ input {
   margin: 0;
 }
 
+.live-shows-heading,
 .show-date,
 .time,
 .text-link,
@@ -348,6 +353,7 @@ input {
   }
 
   .section-heading h2,
+  .live-shows-heading,
   .show-date,
   .time,
   .text-link,
